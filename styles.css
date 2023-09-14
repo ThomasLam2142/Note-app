@@ -77,4 +77,7 @@ body {
     resize: vertical;
 }
 
-/* Optional: Add styles for individual note titles, dates, etc. if needed */
+.submitButton{
+    cursor: pointer;
+}
+
