@@ -1,94 +1,71 @@
-/* Reset some default browser styles */
-html, body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-  }
+/* Global styles */
+body {
+background-color: #f4f4f4;
+font-family: Arial, sans-serif;
+margin: 0;
+padding: 0;
+}
+
+.container {
+max-width: 800px;
+margin: 0 auto;
+padding: 20px;
+}
+
+.titleHeader {
+text-align: center;
+background-color: #007BFF;
+color: #fff;
+padding: 10px;
+margin-bottom: 20px;
+}
+
+.createButton button {
+background-color: #007BFF;
+color: #fff;
+border: none;
+padding: 10px 20px;
+font-size: 16px;
+cursor: pointer;
+}
+
+.createButton button:hover {
+background-color: #0056b3;
+}
+
+/* CSS */
+.allNoteContainer {
+display: flex;
+flex-wrap: wrap;
+justify-content: flex-start;
+margin: 0 -10px; /* Add negative margin to counteract the margin on individual notes */
+}
+
+.note {
+background-color: #fff;
+border: 1px solid #ddd;
+padding: 20px;
+margin: 10px;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+box-sizing: border-box;
+flex: 1; /* Allow notes to fill horizontal space evenly */
+}
+
+/* Media query for larger screens */
+@media screen and (min-width: 1200px) {
+.note {
+    max-width: none; /* Remove max-width */
+    flex-basis: calc(20% - 20px); /* Set flex-basis for equal distribution */
+}
+}
+
+
   
-  /* Global styles */
-  body {
-    background-color: #f4f4f4;
-  }
-  
-  .container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-  
-  /* Header styles */
-  .titleHeader {
-    text-align: center;
-    background-color: #007BFF;
-    color: #fff;
-    padding: 10px;
-  }
-  
-  .titleHeader h1 {
-    margin: 0;
-    font-size: 24px;
-  }
-  
-  /* Button styles */
-  .createButton {
-    text-align: center;
-    margin-top: 20px;
-  }
-  
-  .createButton button {
-    background-color: #007BFF;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-  }
-  
-  .createButton button:hover {
-    background-color: #0056b3;
-  }
-  
-  /* Note styles (customize these for your notes) */
-  .note {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    padding: 20px;
-    margin: 10px 0;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Textarea for entering notes */
-  .note textarea {
-    width: 100%;
-    border: 1px solid #ddd;
-    padding: 10px;
-    resize: vertical; /* Allow vertical resizing of textarea */
-  }
-  
-  /* Optional: Style for individual note titles, dates, etc. */
-  .note .note-title {
-    font-weight: bold;
-  }
-  
-  .note .note-date {
-    color: #888;
-  }
-  
-  /* Optional: Style for a delete button, edit button, etc. */
-  .note .action-buttons {
-    margin-top: 10px;
-  }
-  
-  .note .action-buttons button {
-    background-color: #dc3545;
-    color: #fff;
-    border: none;
-    padding: 5px 10px;
-    font-size: 14px;
-    cursor: pointer;
-  }
-  
-  .note .action-buttons button:hover {
-    background-color: #c82333;
-  }
-  
+.note textarea {
+width: 100%;
+border: 1px solid #ddd;
+padding: 10px;
+resize: vertical;
+}
+
+/* Optional: Add styles for individual note titles, dates, etc. if needed */
