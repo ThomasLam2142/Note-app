@@ -79,5 +79,18 @@ body {
 
 .submitButton{
     cursor: pointer;
+    margin-left:10px;
 }
 
+.deleteButton{
+    margin-left:10px;
+    
+}
+
+.editButton{
+    margin-left:8px;
+}
+
+.editInput{
+    margin-left:10px;
+}
