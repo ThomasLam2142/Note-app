@@ -1,3 +1,4 @@
+
 *{
     margin:0;
     padding: 0;
@@ -20,3 +21,75 @@ body {
     background-color: bisque;
     padding: 80px; /* Adjust the value as needed to add spacing around the text */
 }
+
+/* Global styles */
+body {
+background-color: #f4f4f4;
+font-family: Arial, sans-serif;
+margin: 0;
+padding: 0;
+}
+
+.container {
+max-width: 800px;
+margin: 0 auto;
+padding: 20px;
+}
+
+.titleHeader {
+text-align: center;
+background-color: #007BFF;
+color: #fff;
+padding: 10px;
+margin-bottom: 20px;
+}
+
+.createButton button {
+background-color: #007BFF;
+color: #fff;
+border: none;
+padding: 10px 20px;
+font-size: 16px;
+cursor: pointer;
+}
+
+.createButton button:hover {
+background-color: #0056b3;
+}
+
+/* CSS */
+.allNoteContainer {
+display: flex;
+flex-wrap: wrap;
+justify-content: flex-start;
+margin: 0 -10px; /* Add negative margin to counteract the margin on individual notes */
+}
+
+.note {
+background-color: #fff;
+border: 1px solid #ddd;
+padding: 20px;
+margin: 10px;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+box-sizing: border-box;
+flex: 1; /* Allow notes to fill horizontal space evenly */
+}
+
+/* Media query for larger screens */
+@media screen and (min-width: 1200px) {
+.note {
+    max-width: none; /* Remove max-width */
+    flex-basis: calc(20% - 20px); /* Set flex-basis for equal distribution */
+}
+}
+
+
+  
+.note textarea {
+width: 100%;
+border: 1px solid #ddd;
+padding: 10px;
+resize: vertical;
+}
+
+/* Optional: Add styles for individual note titles, dates, etc. if needed */
