@@ -48,6 +48,12 @@ createButton.addEventListener("click", () => {
     newEditbutton.onclick = function () {
         // Find the parent note of the clicked edit button
         const parentNote = this.parentElement;
+
+        const lineBreak = document.createElement("br");
+        parentNote.appendChild(lineBreak);
+        parentNote.appendChild(lineBreak);
+        
+
         const editInput = document.createElement("input");
         editInput.type = "text";
         editInput.classList.add("editInput");
@@ -57,6 +63,8 @@ createButton.addEventListener("click", () => {
         submitEdit.textContent = "Submit";
         submitEdit.classList.add("submitButton");
         parentNote.appendChild(submitEdit);
+
+        
 
         // Submit Edit Button logic
         submitEdit.onclick = function () {
@@ -69,6 +77,11 @@ createButton.addEventListener("click", () => {
             // Re-add the Delete and Edit buttons
             parentNote.appendChild(newEditbutton);
             parentNote.appendChild(newDelete);
+
+            // Remove the Edit Input and Submit button
+            parentNote.removeChild(lineBreak);
+            parentNote.removeChild(editInput);
+            parentNote.removeChild(submitEdit);
             
         };
     };
