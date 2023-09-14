@@ -1,13 +1,4 @@
 const createButton = document.querySelector(".createButton");
-
-
-
-createButton.addEventListener("click", () => {
-
-    console.log("create button press");
-})
-
-
 const allNotesContainer = document.querySelector(".allNoteContainer");
 
 createButton.addEventListener("click", () => {
@@ -33,4 +24,3 @@ createButton.addEventListener("click", () => {
 
     newNote.appendChild(newDelete);
 });
-
