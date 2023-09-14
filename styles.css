@@ -1,0 +1,22 @@
+*{
+    margin:0;
+    padding: 0;
+    font-family: 'Poppins',sans-serif;
+    box-sizing:border-box;
+}
+
+body {
+    background:#545454;
+    color: white; /* Set text color to white for visibility on a black background */
+}
+
+.allNotesContainer{
+    display:flex;
+    border: 2px solid rgb(0, 0, 0);
+}
+
+.noteContainer {
+    border: 2px solid rgb(0, 200, 255);
+    background-color: bisque;
+    padding: 80px; /* Adjust the value as needed to add spacing around the text */
+}
